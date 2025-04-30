@@ -7,9 +7,10 @@ interface Game {
   name: string;
 }
 
-interface FetchGamesResponse {
+export interface FetchGamesResponse {
   count: number;
   results: Game[];
+  background_image: string;
 }
 
 const useGames = () => {
