@@ -7,10 +7,18 @@ interface Game {
   name: string;
 }
 
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
+
 export interface FetchGamesResponse {
   count: number;
   results: Game[];
   background_image: string;
+  parent_platforms: {platform: Platform}[];
+    
 }
 
 const useGames = () => {
